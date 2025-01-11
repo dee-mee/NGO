@@ -1609,6 +1609,11 @@ header.contact-header p {
 .impact-info {
     margin-top: 60px;
     text-align: center;
+    
+}
+
+.impact-info h2 {
+    color: #000;
 }
 
 .impact-grid {
@@ -1621,6 +1626,7 @@ header.contact-header p {
 .impact-item {
     padding: 20px;
     background: #fff;
+    color: #000;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -1630,8 +1636,12 @@ header.contact-header p {
     margin-bottom: 15px;
 }
 
+.impact-item p {
+    color: #000000;
+    margin-bottom: 10px;
+}
 .impact-item h3 {
-    color: #ff5733;
+    color: #000000;
     margin-bottom: 10px;
 }
 
@@ -1640,6 +1650,7 @@ header.contact-header p {
     padding: 60px 0;
     background: #f8f9fa;
     text-align: center;
+    color: #000;
 }
 
 .benefits-grid {
@@ -1652,6 +1663,7 @@ header.contact-header p {
 .benefit-item {
     padding: 30px;
     background: white;
+    color: #000;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
