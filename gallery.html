@@ -50,26 +50,26 @@
         </div>
     </nav>
 
-    <!-- Gallery Header -->
-    <section class="gallery-header">
-        <div class="container">
-            <h1>Our Gallery</h1>
-            <div class="gallery-nav">
-                <a href="#" class="active">VIEW ALL</a>
-                <a href="#">HUMANITY</a>
-                <a href="#">CHILDREN</a>
-                <a href="#">DONATE</a>
-                <a href="#">VOLUNTEER</a>
-            </div>
+<!-- Gallery Header -->
+<section class="gallery-header">
+    <div class="container">
+        <h1>Our Gallery</h1>
+        <div class="gallery-nav">
+            <a href="#" class="active" data-category="all">VIEW ALL</a>
+            <a href="#" data-category="humanity">HUMANITY</a>
+            <a href="#" data-category="children">CHILDREN</a>
+            <a href="#" data-category="donate">DONATE</a>
+            <a href="#" data-category="volunteer">VOLUNTEER</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Gallery Grid -->
     <section class="gallery-grid">
         <div class="container">
             <div class="gallery-items">
-                <div class="gallery-item">
-                    <img src="images/gallery1.jpg" alt="Donation Collection">
+                <div class="gallery-item" data-categories="donate,humanity">
+                    <img src="images/gallery3.webp" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
                             <h3>Donation Drive</h3>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-categories="volunteer,humanity">
                     <img src="images/gallery2.jpg" alt="Volunteer Cleanup">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
@@ -86,8 +86,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery3.jpg" alt="Tree Planting">
+                <div class="gallery-item" data-categories="volunteer,humanity">
+                    <img src="images/gallery3.webp" alt="Tree Planting">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
                             <h3>Tree Planting Initiative</h3>
@@ -95,8 +95,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery1.jpg" alt="Donation Collection">
+                <div class="gallery-item" data-categories="donate,children">
+                    <img src="images/gallery1.webp" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
                             <h3>Donation Drive</h3>
@@ -104,27 +104,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery2.jpg" alt="Volunteer Cleanup">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Community Cleanup</h3>
-                            <p>Volunteers working together to keep our environment clean</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery3.jpg" alt="Tree Planting">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Tree Planting Initiative</h3>
-                            <p>Making our world greener one tree at a time</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more gallery items as needed -->
-                <div class="gallery-item">
-                    <img src="images/gallery1.jpg" alt="Donation Collection">
+                <div class="gallery-item" data-categories="volunteer,humanity">
+                    <img src="images/gallery1.webp" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
                             <h3>Donation Drive</h3>
@@ -132,26 +113,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery2.jpg" alt="Volunteer Cleanup">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Community Cleanup</h3>
-                            <p>Volunteers working together to keep our environment clean</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery3.jpg" alt="Tree Planting">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Tree Planting Initiative</h3>
-                            <p>Making our world greener one tree at a time</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery1.jpg" alt="Donation Collection">
+                <div class="gallery-item" data-categories="donate,children">
+                    <img src="images/gallery3.webp" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
                             <h3>Donation Drive</h3>
@@ -159,25 +122,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery2.jpg" alt="Volunteer Cleanup">
+                <div class="gallery-item" data-categories="donate,children">
+                    <img src="images/gallery2.jpg" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
-                            <h3>Community Cleanup</h3>
-                            <p>Volunteers working together to keep our environment clean</p>
+                            <h3>Donation Drive</h3>
+                            <p>Collecting toys and clothes for children in need</p>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery3.jpg" alt="Tree Planting">
+                <div class="gallery-item" data-categories="donate,children">
+                    <img src="images/gallery1.webp" alt="Donation Collection">
                     <div class="gallery-overlay">
                         <div class="overlay-content">
-                            <h3>Tree Planting Initiative</h3>
-                            <p>Making our world greener one tree at a time</p>
+                            <h3>Donation Drive</h3>
+                            <p>Collecting toys and clothes for children in need</p>
                         </div>
                     </div>
+                </div>
+                <div class="gallery-item" data-categories="volunteer, donate">
+                    <img src="images/gallery1.webp" alt="Donation Collection">
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Donation Drive</h3>
+                            <p>Collecting toys and clothes for children in need</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
     <footer class="footer">
@@ -266,11 +238,13 @@
                 }
             });
         });
-
         document.addEventListener('DOMContentLoaded', function() {
-            // Gallery navigation functionality
+            // Mobile menu code remains the same...
+        
+            // Gallery filtering functionality
             const galleryNav = document.querySelector('.gallery-nav');
             const galleryLinks = galleryNav.querySelectorAll('a');
+            const galleryItems = document.querySelectorAll('.gallery-item');
             
             galleryLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
@@ -282,25 +256,39 @@
                     // Add active class to clicked link
                     this.classList.add('active');
                     
-                    // Here you would typically add filtering logic based on the category
-                    const category = this.textContent.toLowerCase();
+                    // Get the selected category from data attribute
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter gallery items
                     filterGallery(category);
                 });
             });
             
             function filterGallery(category) {
-                const galleryItems = document.querySelectorAll('.gallery-item');
-                
                 galleryItems.forEach(item => {
-                    if (category === 'view all') {
+                    if (!item.dataset.categories) return; // Skip if no categories defined
+                    
+                    const itemCategories = item.dataset.categories.split(',');
+                    
+                    if (category === 'all') {
                         item.style.display = 'block';
+                        fadeIn(item);
                     } else {
-                        // Add your filtering logic here based on categories
-                        // This is a placeholder for demonstration
-                        const itemCategory = item.dataset.category;
-                        item.style.display = itemCategory === category ? 'block' : 'none';
+                        if (itemCategories.includes(category)) {
+                            item.style.display = 'block';
+                            fadeIn(item);
+                        } else {
+                            item.style.display = 'none';
+                        }
                     }
                 });
+            }
+        
+            function fadeIn(element) {
+                element.style.opacity = '0';
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                }, 50);
             }
         });
     </script>

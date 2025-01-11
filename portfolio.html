@@ -51,6 +51,77 @@
         </div>
     </div>
 </nav>
+
+  <!-- Portfolio Header -->
+  <section class="portfolio-header">
+    <div class="container">
+        <h1>Our Projects</h1>
+        <div class="portfolio-nav">
+            <a href="#" class="active" data-category="all">ALL PROJECTS</a>
+            <a href="#" data-category="education">EDUCATION</a>
+            <a href="#" data-category="healthcare">HEALTHCARE</a>
+            <a href="#" data-category="environment">ENVIRONMENT</a>
+            <a href="#" data-category="community">COMMUNITY</a>
+        </div>
+    </div>
+</section>
+<section class="portfolio-section">
+    <h2>Our Projects</h2>
+    <div class="title-underline"></div>
+    <div class="portfolio-grid">
+        <!-- Portfolio Card 1 -->
+        <div class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="images/edu.webp" alt="Education Project">
+                <span class="project-tag">Education</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>School Building Project</h3>
+                <p>Constructing classrooms in rural areas to provide quality education.</p>
+                <div class="project-meta">
+                    <span>March 2025</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Card 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="images/health.webp" alt="Healthcare Project">
+                <span class="project-tag">Healthcare</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Medical Camps</h3>
+                <p>Providing free healthcare services in remote areas to save lives.</p>
+                <div class="project-meta">
+                    <span>April 2025</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Card 3 -->
+        <div class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="images/plant.webp" alt="Environment Project">
+                <span class="project-tag">Environment</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Urban Reforestation</h3>
+                <p>Planting trees in urban areas to create sustainable green spaces.</p>
+                <div class="project-meta">
+                    <span>May 2025</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -116,25 +187,75 @@
 </footer>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu functionality
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
     
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            
-            // Animate hamburger to X
-            const spans = this.querySelectorAll('span');
-            spans.forEach(span => span.classList.toggle('active'));
-        });
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const spans = this.querySelectorAll('span');
+                spans.forEach(span => span.classList.toggle('active'));
+            });
+        }
     
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navLinks.classList.remove('active');
-                const spans = mobileMenuBtn.querySelectorAll('span');
-                spans.forEach(span => span.classList.remove('active'));
+                if (mobileMenuBtn) {
+                    const spans = mobileMenuBtn.querySelectorAll('span');
+                    spans.forEach(span => span.classList.remove('active'));
+                }
             }
         });
+    
+        // Portfolio filtering functionality
+        const portfolioNav = document.querySelector('.portfolio-nav');
+        if (portfolioNav) {
+            const portfolioLinks = portfolioNav.querySelectorAll('a');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            portfolioLinks.forEach(link => {
+                link.addEventListener('click', handlePortfolioLinkClick);
+            });
+            
+            function handlePortfolioLinkClick(e) {
+                e.preventDefault();
+                portfolioLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                filterPortfolio(this.getAttribute('data-category'));
+            }
+            
+            
+            function filterPortfolio(category) {
+                portfolioItems.forEach(item => {
+                    if (!item.dataset.categories) return; // Skip if no categories defined
+                    
+                    const itemCategories = item.dataset.categories.split(',');
+                    
+                    if (category === 'all') {
+                        item.style.display = 'block';
+                        fadeIn(item);
+                    } else {
+                        if (itemCategories.includes(category)) {
+                            item.style.display = 'block';
+                            fadeIn(item);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            }
+    
+            function fadeIn(element) {
+                element.style.opacity = '0';
+                element.style.transition = 'opacity 0.3s ease';
+                requestAnimationFrame(() => {
+                    element.style.opacity = '1';
+                });
+            }
+        }
     });
 
 </script>
